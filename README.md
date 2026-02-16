@@ -14,7 +14,7 @@ Extension ini membantu mengingatkan waktu sholat dengan menampilkan notifikasi d
 Alur umumnya:
 - Mengambil/menentukan jadwal sholat.
 - Menjalankan pengecekan waktu secara berkala.
-- Saat memasuki waktu sholat, extension menampilkan notifikasi.
+- Saat memasuki waktu sholat, extension menampilkan notifikasi, bahkan bisa memutar suara adzan.
 
 ## Fitur
 - [x] Pengingat waktu sholat melalui notifikasi di VS Code
