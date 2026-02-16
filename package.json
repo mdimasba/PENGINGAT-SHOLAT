@@ -1,0 +1,98 @@
+{
+  "name": "pengingat-sholat",
+  "displayName": "Pengingat Sholat",
+  "description": "Ekstensi VS Code yang mengingatkan waktu sholat di Indonesia dengan popup fullscreen dan suara adzan.",
+  "version": "1.0.0",
+  "publisher": "DimasBagus",
+  "author": {
+    "name": "Dimas Bagus"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "islam",
+    "sholat",
+    "pengingat",
+    "adzan",
+    "indonesia"
+  ],
+  "icon": "media/icon.png",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "islamicReminder.openSettings",
+        "title": "Pengingat Sholat: Buka Pengaturan"
+      },
+      {
+        "command": "islamicReminder.showPrayerTimes",
+        "title": "Pengingat Sholat: Lihat Jadwal Sholat Hari Ini"
+      },
+      {
+        "command": "islamicReminder.selectLocation",
+        "title": "Pengingat Sholat: Pilih Lokasi (Provinsi & Kota)"
+      }
+    ],
+    "configuration": {
+      "title": "Pengingat Sholat",
+      "properties": {
+        "islamicReminder.enableReminder": {
+          "type": "boolean",
+          "default": true,
+          "description": "Aktifkan atau nonaktifkan pengingat sholat."
+        },
+        "islamicReminder.enableSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Aktifkan atau nonaktifkan suara adzan saat waktu sholat tiba."
+        },
+        "islamicReminder.enablePreReminder": {
+          "type": "boolean",
+          "default": true,
+          "description": "Aktifkan atau nonaktifkan notifikasi 5 menit sebelum waktu sholat."
+        },
+        "islamicReminder.cityId": {
+          "type": "string",
+          "default": "1301",
+          "description": "ID kota untuk jadwal sholat (dari MyQuran API)."
+        },
+        "islamicReminder.cityName": {
+          "type": "string",
+          "default": "KOTA JAKARTA",
+          "description": "Nama kota/kabupaten yang dipilih."
+        },
+        "islamicReminder.provinceName": {
+          "type": "string",
+          "default": "DKI JAKARTA",
+          "description": "Nama provinsi yang dipilih."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT"
+}
