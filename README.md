@@ -1,5 +1,4 @@
-# PENGINGAT-SHOLAT
-By Dimas Gamedev
+# PENGINGAT-SHOLAT - VSCODE EXTENSION
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-Extension-007ACC?logo=visualstudiocode&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-2ea44f)
